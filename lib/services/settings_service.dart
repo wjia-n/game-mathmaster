@@ -28,14 +28,6 @@ class MathSettings extends ChangeNotifier {
   /// Order-safe profile storage: a single JSON string.
   static String encodeProfile(Map<String, dynamic> p) => jsonEncode(p);
 
-  static const _defaultProfile = <String, dynamic>{
-    'name': 'Scholar',
-    'theme': 'classic',
-    'digitStyle': 0,
-    'difficulty': 1, // 0 easy, 1 medium, 2 hard
-    'lastMode': 0, // 0 blitz, 1 zen, 2 daily
-  };
-
   bool musicOn = true;
   bool sfxOn = true;
   double volume = 0.8;
