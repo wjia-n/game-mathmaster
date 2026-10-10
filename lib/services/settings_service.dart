@@ -36,7 +36,7 @@ class MathSettings extends ChangeNotifier {
   int digitStyle = 0;
   int difficulty = 1;
   int lastMode = 0;
-  bool isPro = false;
+  bool isPro = true; // everything unlocked — no Pro version
 
   int gamesPlayed = 0;
   int bestBlitz = 0;
@@ -86,7 +86,7 @@ class MathSettings extends ChangeNotifier {
     musicOn = p.getBool(_kMusic) ?? true;
     sfxOn = p.getBool(_kSfx) ?? true;
     volume = p.getDouble(_kVolume) ?? 0.8;
-    isPro = p.getBool(_kIsPro) ?? false;
+    isPro = true; // everything unlocked
     gamesPlayed = p.getInt(_kGames) ?? 0;
     bestStreakAll = p.getInt(_kBestStreak) ?? 0;
     totalCorrect = p.getInt(_kTotalCorrect) ?? 0;
