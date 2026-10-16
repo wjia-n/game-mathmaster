@@ -5,6 +5,7 @@ import '../services/settings_service.dart';
 import '../theme/chalk_art.dart';
 import '../theme/chalk_themes.dart';
 import 'pro_screen.dart';
+import '../transfer/transfer_ui.dart';
 
 /// Settings — music/SFX toggles, volume, lifetime stats.
 class SettingsScreen extends StatefulWidget {
@@ -83,6 +84,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   const EdgeInsets.symmetric(horizontal: 22, vertical: 14),
               child: Column(
                 children: [
+              TransferSaveTile(gameSlug: 'mathmaster'),
                   BoardCard(
                     theme: t,
                     title: 'Sound',
