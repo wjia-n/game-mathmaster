@@ -867,11 +867,16 @@ class _SupportCard extends StatelessWidget {
     }
     return BoardCard(
       theme: theme,
-      title: 'Support Wajiha',
+      // iOS variant: Gold Star wording, no tip solicitation (Android keeps the original).
+      title: defaultTargetPlatform == TargetPlatform.iOS
+          ? '⭐ Gold Star'
+          : 'Support Wajiha',
       child: Column(
         children: [
           Text(
-            'Math Master is 100% free. If it sharpened your brain, a small tip keeps the classroom open!',
+            defaultTargetPlatform == TargetPlatform.iOS
+                ? 'If Math Master sharpened your brain, a Gold Star is a nice way to say thanks!'
+                : 'Math Master is 100% free. If it sharpened your brain, a small tip keeps the classroom open!',
             style: Chalk.body(14, theme: theme),
             textAlign: TextAlign.center,
           ),
